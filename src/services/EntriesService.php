@@ -12,6 +12,7 @@ namespace venveo\weightedsearch\services;
 
 use craft\elements\Entry;
 use craft\helpers\Search;
+use craft\models\FieldLayout;
 use craft\models\Section;
 use venveo\weightedsearch\WeightedSearch;
 
@@ -148,9 +149,10 @@ class EntriesService extends Component {
 			->andWhere( [ 'like', 'keywords', $escapedNeedle ] );
 
 		if ( is_array( $sectionIds ) && ! empty( $sectionIds ) ) {
-			$query->join('LEFT JOIN', 'entries', 'elementId=entries.id' )
+			$query->join( 'LEFT JOIN', 'entries', 'elementId=entries.id' )
 			      ->andwhere( [ 'in', 'sectionId', $sectionIds ] );
 		}
+
 		return $query;
 	}
 
@@ -161,9 +163,12 @@ class EntriesService extends Component {
 	 * @return int
 	 */
 	private function getOverrideWeight( Entry $entry, $needle ) {
-		$overrideWeight      = 0;
-		$field = Craft::$app->getFields()->getFieldByHandle('prioritizedSearchTerms');
-		if (!$field) return $overrideWeight;
+		$overrideWeight = 0;
+		$field          = $entry->fieldLayout->getFieldByHandle( 'prioritizedSearchTerms' );
+		if ( ! $field ) {
+			return $overrideWeight;
+		}
+		/** @var FieldLayout $fields */
 		$prioritySearchTerms = $entry->getFieldValue( 'prioritizedSearchTerms' );
 		if ( $prioritySearchTerms ) {
 			foreach ( $prioritySearchTerms as $searchTerm ) {

@@ -1,6 +1,6 @@
 # Weighted Search plugin for Craft CMS 3.x
 
-A remake of the [weighted search plugin](https://github.com/wja-no/craft-weighted-search) for Craft 2 by @wja-no
+A remake of the [weighted search plugin](https://github.com/wja-no/craft-weighted-search) for Craft 2 by [wja-no](https://github.com/wja-no)
 
 
 ## Usage
