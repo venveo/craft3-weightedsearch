@@ -1,0 +1,55 @@
+{
+  "name": "venveo/craft3-weightedsearch",
+  "description": "A remake of the weighted search plugin for Craft 2",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "weighted search",
+    "craft3"
+  ],
+  "support": {
+    "docs": "https://github.com/venveo/craft3-weightedsearch/blob/master/README.md",
+    "issues": "https://github.com/venveo/craft3-weightedsearch/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Venveo",
+      "homepage": "https://www.venveo.com"
+    },
+    {
+      "name": "Ransom Roberson",
+      "homepage": "https://www.ransom.pw"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "~3.0.0-beta.23"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "venveo\\weightedsearch\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Weighted Search",
+    "handle": "craft3-weightedsearch",
+    "schemaVersion": "1.0.0",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/venveo/craft3-weightedsearch/master/CHANGELOG.md",
+    "components": {
+      "entriesService": "venveo\\weightedsearch\\services\\EntriesService"
+    },
+    "class": "venveo\\weightedsearch\\WeightedSearch"
+  }
+}
