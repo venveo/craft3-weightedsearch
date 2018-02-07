@@ -1,8 +1,8 @@
 {
-  "name": "venveo/craft3-weightedsearch",
+  "name": "ray-001/craft3-weightedsearch",
   "description": "A remake of the weighted search plugin for Craft 2",
   "type": "craft-plugin",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "keywords": [
     "craft",
     "cms",
@@ -12,8 +12,8 @@
     "craft3"
   ],
   "support": {
-    "docs": "https://github.com/venveo/craft3-weightedsearch/blob/master/README.md",
-    "issues": "https://github.com/venveo/craft3-weightedsearch/issues"
+    "docs": "https://github.com/ray-001/craft3-weightedsearch/blob/master/README.md",
+    "issues": "https://github.com/ray-001/craft3-weightedsearch/issues"
   },
   "license": "MIT",
   "authors": [
