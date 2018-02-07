@@ -139,7 +139,7 @@ class EntriesService extends Component {
 
 		$query = ( new Query() )
 			->select( [ 'elementId', 'attribute', 'fieldId', 'keywords' ] )
-			->from( 'searchindex' )
+			->from( '{{%searchindex}}' )
 			->where( [ 'siteId' => $siteId ] )
 			->andFilterWhere( [
 				'or',
@@ -149,7 +149,7 @@ class EntriesService extends Component {
 			->andWhere( [ 'like', 'keywords', $escapedNeedle ] );
 
 		if ( is_array( $sectionIds ) && ! empty( $sectionIds ) ) {
-			$query->join( 'LEFT JOIN', 'entries', 'elementId=entries.id' )
+			$query->join('LEFT JOIN', '{{%entries}}', 'elementId={{%entries}}.id' )
 			      ->andwhere( [ 'in', 'sectionId', $sectionIds ] );
 		}
 
@@ -225,7 +225,7 @@ class EntriesService extends Component {
 
 		$queryRow = ( new Query() )
 			->select( [ 'handle', 'type' ] )
-			->from( 'fields' )
+			->from( '{{%fields}}' )
 			->where( [ 'id' => $fieldId ] )
 			->one();
 
