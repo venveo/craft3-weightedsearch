@@ -37,7 +37,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "ray-001\\weightedsearch\\": "src/"
+      "venveo\\weightedsearch\\": "src/"
     }
   },
   "extra": {
@@ -48,8 +48,8 @@
     "hasCpSection": false,
     "changelogUrl": "https://raw.githubusercontent.com/venveo/craft3-weightedsearch/master/CHANGELOG.md",
     "components": {
-      "entriesService": "ray-001\\weightedsearch\\services\\EntriesService"
+      "entriesService": "venveo\\weightedsearch\\services\\EntriesService"
     },
-    "class": "ray-001\\weightedsearch\\WeightedSearch"
+    "class": "venveo\\weightedsearch\\WeightedSearch"
   }
 }
