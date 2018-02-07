@@ -2,7 +2,7 @@
   "name": "ray-001/craft3-weightedsearch",
   "description": "A remake of the weighted search plugin for Craft 2",
   "type": "craft-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "craft",
     "cms",
@@ -37,7 +37,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "venveo\\weightedsearch\\": "src/"
+      "ray-001\\weightedsearch\\": "src/"
     }
   },
   "extra": {
@@ -48,8 +48,8 @@
     "hasCpSection": false,
     "changelogUrl": "https://raw.githubusercontent.com/venveo/craft3-weightedsearch/master/CHANGELOG.md",
     "components": {
-      "entriesService": "venveo\\weightedsearch\\services\\EntriesService"
+      "entriesService": "ray-001\\weightedsearch\\services\\EntriesService"
     },
-    "class": "venveo\\weightedsearch\\WeightedSearch"
+    "class": "ray-001\\weightedsearch\\WeightedSearch"
   }
 }
