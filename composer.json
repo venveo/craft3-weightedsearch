@@ -2,7 +2,7 @@
   "name": "ray-001/craft3-weightedsearch",
   "description": "A remake of the weighted search plugin for Craft 2",
   "type": "craft-plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "craft",
     "cms",
